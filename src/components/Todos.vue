@@ -1,16 +1,13 @@
 <template>
-
-    <div>
-        <h1>Todos</h1>
-    </div>
-
+  <div>
+    <h1>Todos</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'my todos'
+  name: "Todos"
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

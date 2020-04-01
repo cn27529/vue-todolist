@@ -1,32 +1,34 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <Todos />
+  </div>
 </template>
 
 <script>
-//import Todos from "./components/Todos";
+import Todos from './components/Todos';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    //Todos
+    Todos
   },
   data() {
     return {
-      msg: "Hello",
+      msg: 'Hello',
       todos: [
         {
           id: 1,
-          title: "Todo One",
+          title: 'Todo One',
           completed: false
         },
         {
           id: 2,
-          title: "Todo Two",
+          title: 'Todo Two',
           completed: true
         },
         {
           id: 3,
-          title: "Todo Three",
+          title: 'Todo Three',
           completed: false
         }
       ]

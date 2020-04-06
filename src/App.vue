@@ -47,18 +47,50 @@ export default {
   methods: {
     deleteTodo(id) {
       console.log('deleteTodo', id);
-      this.todos = this.todos.filter(todo => todo.id !== id);
+      //this.todos = this.todos.filter(todo => todo.id !== id);
+
+      const url = `https://jsonplaceholder.typicode.com/todos/${id}`;
+      const httpReqHeaders = {
+        Authorization: null,
+        'Content-Type': 'application/json'
+      };
+      // check the structure here: https://github.com/axios/axios#request-config
+      const axiosConfigObject = { headers: httpReqHeaders };
+
+      axios
+        .delete(url, axiosConfigObject)
+        .then(res => {
+          console.log('res', res);
+          this.todos = this.todos.filter(todo => todo.id !== id);
+        })
+        .catch(err => console.log(err));
     },
     addTodo(newTodo) {
       console.log('addTodo', newTodo);
-      this.todos = [...this.todos, newTodo];
+      //this.todos = [...this.todos, newTodo];
+
+      const { title, completed } = newTodo;
+
+      axios
+        .post('https://jsonplaceholder.typicode.com/todos', {
+          title,
+          completed
+        })
+        .then(res => {
+          console.log('res', res);
+          this.todos = [...this.todos, res.data];
+        })
+        .catch(err => console.log(err));
     }
   },
   created() {
     //console.log('created', 'hi created');
     axios
       .get('https://jsonplaceholder.typicode.com/todos?_limit=5')
-      .then(res => (this.todos = res.data))
+      .then(res => {
+        console.log('res', res);
+        this.todos = res.data;
+      })
       .catch(err => console.log(err));
   }
 };

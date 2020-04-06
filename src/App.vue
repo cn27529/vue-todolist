@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header v-bind:subject="subject" />
     <router-view/>
   </div>
 </template>
+
+<script>
+import Header from './components/Header';
+
+export default {
+  name: 'App',
+  components: {
+    Header
+  },
+  data() {
+    return {
+      subject: 'Todo List'
+    };
+  }
+};
+</script>
+
 
 <style>
 #app {
@@ -28,5 +42,21 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+* {
+  box-sizing: border-box;
+  margin-top: 20;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
 }
 </style>

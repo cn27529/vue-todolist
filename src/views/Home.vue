@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <Header v-bind:subject="subject" />
+    
     <AddTodo v-on:add-todo="addTodo" />
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
 </template>
 
 <script>
-import Header from '../components/layout/Header';
+//import Header from '../components/Header';
 import Todos from '../components/Todos';
 import AddTodo from '../components/AddTodo';
 import axios from 'axios';
 
 export default {
-  name: 'App',
+  name: 'Home',
   components: {
-    Header,
+    //Header,
     Todos,
     AddTodo
   },
@@ -97,22 +97,6 @@ export default {
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin-top: 20;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  margin: 0px;
-}
-
-h1 {
-  text-align: center;
-}
-
 .btn {
   display: inline-block;
   border: none;

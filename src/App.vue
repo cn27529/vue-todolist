@@ -1,21 +1,21 @@
 <template>
   <div id="app">
     <Header v-bind:subject="subject" />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Header from './components/Header';
+import Header from "./components/Header";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header
   },
   data() {
     return {
-      subject: 'Todo List'
+      subject: "Todo List"
     };
   }
 };

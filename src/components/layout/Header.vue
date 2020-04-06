@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <h1>{{ title }}</h1>
+        <h1>{{ subject }}</h1>
     </header>
 </template>
 
@@ -8,7 +8,7 @@
 export default {
   name: 'Header',
   props: {
-    title: String
+    subject: String
   }
 };
 </script>
@@ -18,7 +18,7 @@ export default {
   background: #333333;
   color: #ffffff;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
 }
 
 .header a {

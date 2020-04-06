@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <Header v-bind:title="title" />
-    <Todos v-bind:todos="todos" />
+    <Header v-bind:subject="subject" />
+    <AddTodo v-on:add-todo="addTodo" />
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
 </template>
 
 <script>
 import Header from './components/layout/Header';
 import Todos from './components/Todos';
+import AddTodo from './components/AddTodo';
+import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Todos
+    Todos,
+    AddTodo
   },
   data() {
     return {
-      title: 'Todo List',
+      subject: 'Todo List',
       todos: [
         {
           id: 1,
@@ -39,6 +43,23 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    deleteTodo(id) {
+      console.log('deleteTodo', id);
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    },
+    addTodo(newTodo) {
+      console.log('addTodo', newTodo);
+      this.todos = [...this.todos, newTodo];
+    }
+  },
+  created() {
+    //console.log('created', 'hi created');
+    axios
+      .get('https://jsonplaceholder.typicode.com/todos')
+      .then(res => (this.todos = res.data))
+      .catch(err => console.log(err));
   }
 };
 </script>
@@ -53,9 +74,23 @@ export default {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+  margin: 0px;
 }
 
 h1 {
   text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555555;
+  color: #ffffff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #666666;
 }
 </style>

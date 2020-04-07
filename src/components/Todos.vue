@@ -1,8 +1,14 @@
 <template>
   <div>
     <ul>
-      <li v-for="(todo, id) in todos" v-bind:key="id">
-        <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
+      <li
+        v-for="(todo, id) in todos"
+        :key="id"
+      >
+        <TodoItem
+          :todo="todo"
+          @del-todo="$emit('del-todo', todo.id)"
+        />
       </li>
     </ul>
   </div>

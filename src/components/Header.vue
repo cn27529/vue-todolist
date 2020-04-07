@@ -1,9 +1,13 @@
 <template>
-    <header class="header">
-        <h1>{{ subject }}</h1>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </header>
+  <header class="header">
+    <h1>{{ subject }}</h1>
+    <router-link to="/">
+      Home
+    </router-link> |
+    <router-link to="/about">
+      About
+    </router-link>
+  </header>
 </template>
 
 <script>

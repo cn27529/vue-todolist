@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header v-bind:subject="subject" />
+    <Header :subject="subject" />
     <router-view />
   </div>
 </template>

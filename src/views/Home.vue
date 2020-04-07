@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    
-    <AddTodo v-on:add-todo="addTodo" />
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    <AddTodo @add-todo="addTodo" />
+    <Todos
+      :todos="todos"
+      @del-todo="deleteTodo"
+    />
   </div>
 </template>
 
@@ -87,7 +89,7 @@ export default {
     //console.log('created', 'hi created')
     //.get('http://localhost:3004/todos?_limit=10')
     axios
-      .get('http://localhost:3004/todos?_limit=20')
+      .get('http://localhost:3004/todos')
       .then(res => {
         console.log('res', res);
         this.todos = res.data;

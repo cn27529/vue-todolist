@@ -1,10 +1,19 @@
 <template>
-    <div>
-        <form @submit="addTodo">
-            <input type="text" name="title" placeholder="Add Todo..." v-model="title">
-            <input type="submit" value="Submit" class="btn">
-        </form>
-    </div>
+  <div>
+    <form @submit="addTodo">
+      <input
+        type="text"
+        name="title"
+        placeholder="Add Todo..."
+        v-model="title"
+      >
+      <input
+        type="submit"
+        value="Submit"
+        class="btn"
+      >
+    </form>
+  </div>
 </template>
 
 <script>

@@ -49,7 +49,7 @@ export default {
       console.log('deleteTodo', id);
       //this.todos = this.todos.filter(todo => todo.id !== id);
 
-      const url = `https://jsonplaceholder.typicode.com/todos/${id}`;
+      const url = `http://localhost:3004/todos/${id}`;
       const httpReqHeaders = {
         Authorization: null,
         'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ export default {
       const { title, completed } = newTodo;
 
       axios
-        .post('https://jsonplaceholder.typicode.com/todos', {
+        .post('http://localhost:3004/todos', {
           title,
           completed
         })
@@ -84,9 +84,10 @@ export default {
     }
   },
   created() {
-    //console.log('created', 'hi created');
+    //console.log('created', 'hi created')
+    //.get('http://localhost:3004/todos?_limit=10')
     axios
-      .get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+      .get('http://localhost:3004/todos?_limit=20')
       .then(res => {
         console.log('res', res);
         this.todos = res.data;

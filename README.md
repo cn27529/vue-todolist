@@ -29,4 +29,7 @@ https://cli.vuejs.org/zh/guide/cli-service.html#vue-cli-service-serve
 
 https://www.youtube.com/watch?v=Wy9q22isx3U&t=2652s
 
+## json-server
+json-server --watch db.json --port 3004
+
 

@@ -1,26 +1,20 @@
 <template>
   <div id="app">
-    <Header :subject="subject" />
-    <router-view />
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
+import HelloWorld from './components/HelloWorld2.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    Header
-  },
-  data() {
-    return {
-      subject: "Todo List"
-    };
+    HelloWorld
   }
 };
 </script>
-
 
 <style>
 #app {
@@ -29,34 +23,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-* {
-  box-sizing: border-box;
-  margin-top: 20;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  margin: 0px;
-}
-
-h1 {
-  text-align: center;
+  margin-top: 60px;
 }
 </style>

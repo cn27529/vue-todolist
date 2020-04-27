@@ -23,8 +23,8 @@
 
 <script>
 export default {
-  name: "TodoItem",
-  props: ["todo"],
+  name: 'TodoItem',
+  props: ['todo'],
   methods: {
     markComplete() {
       //console.log(123);

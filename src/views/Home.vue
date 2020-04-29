@@ -97,7 +97,7 @@ export default {
       .catch(err => console.log(err));
   }
 };
-</script>
+</script>npm 
 
 <style>
 .btn {

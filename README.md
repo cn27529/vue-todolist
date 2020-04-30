@@ -32,4 +32,8 @@ https://www.youtube.com/watch?v=Wy9q22isx3U&t=2652s
 ## json-server
 json-server --watch db.json --port 3004
 
+# style from
+file:///Y:/1-AP/UI%20%E7%89%88%E5%9E%8B/metronic/v6.0.3/metronic_v6.0.3/theme/classic/demo1/index.html
+
+
 

@@ -22,8 +22,8 @@ export default {
 </script>
 
 
-<style>
-@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css';
+<style lang="scss">
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

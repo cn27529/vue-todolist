@@ -2,25 +2,27 @@
   <div id="app">
     <Header :subject="subject" />
     <router-view />
+
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
   </div>
 </template>
 
 <script>
-import Header from './components/Header';
+import Header from './components/Header'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
   },
   data() {
     return {
-      subject: 'Todo List'
-    };
-  }
-};
+      subject: 'Todo List',
+    }
+  },
+}
 </script>
-
 
 <style lang="scss">
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -62,4 +64,3 @@ h1 {
   text-align: center;
 }
 </style>
-

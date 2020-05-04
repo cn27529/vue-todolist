@@ -3,7 +3,8 @@
     <h1>{{ subject }}</h1>
     <router-link to="/">
       Home
-    </router-link> |
+    </router-link>
+    |
     <router-link to="/about">
       About
     </router-link>
@@ -14,9 +15,9 @@
 export default {
   name: 'Header',
   props: {
-    subject: String
-  }
-};
+    subject: String,
+  },
+}
 </script>
 
 <style scoped>
@@ -34,4 +35,3 @@ export default {
   text-decoration: none;
 }
 </style>
-

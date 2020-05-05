@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App2.vue'
+import App from './App3.vue'
 import router from './router'
 
 //import "bootstrap"; // 從nodeModule中載入Bootstrap

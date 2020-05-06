@@ -38,4 +38,9 @@ https://www.youtube.com/watch?v=Wy9q22isx3U&t=2652s
 
 json-server --watch db.json --port 3004
 
-##
+## ref doc
+https://dotblogs.com.tw/rexhuang/2019/12/06/230923
+
+## good demo
+https://www.youtube.com/watch?v=3ypel9_VtmU
+

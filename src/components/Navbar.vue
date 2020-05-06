@@ -10,16 +10,12 @@
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#">
-            <router-link to="/">
-    Home 
-    </router-link>
+            111
      <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">
-            <router-link to="/about">
-      About
-    </router-link>
+            222
         </a>
       </li>
       <!-- <li class="nav-item">

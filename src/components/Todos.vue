@@ -1,5 +1,6 @@
 <template>
   <div>
+    
     <ul>
       <li
         v-for="(todo, id) in todos"
@@ -11,6 +12,7 @@
         />
       </li>
     </ul>
+
   </div>
 </template>
 
